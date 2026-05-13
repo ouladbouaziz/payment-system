@@ -17,17 +17,14 @@ src/
 
 ```bash
 cd src
-javac payment/PaymentMethod.java payment/CreditCardPayment.java Main.java
-java Main
+javac payment/PaymentMethod.java payment/CreditCardPayment.java PaymentGUI.java
+java PaymentGUI
 ```
+
+## Fonctionnalités
+- Interface graphique Swing
+- Formulaire de saisie (carte, titulaire, montant)
+- Affichage du reçu dans la fenêtre
 
 ## Exemple de sortie
-
-```
-Paiement de 149.99DH par carte de credit !
-======= Recu =======
-Titulaire : Alice Martin
-Montant : 149.99DH
-Date : 2026-05-13
-====================
-```
+<img src="images/resultat.png" width="800">
