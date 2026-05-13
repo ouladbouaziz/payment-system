@@ -13,7 +13,8 @@ public class CreditCardPayment implements PaymentMethod {
     @Override
     public void pay(double amount){
         System.out.println("Paiement de " + amount + "DH par carte de credit !");
-        
+        Receipt receipt = new Receipt(amount, cardHolder);
+        receipt.display();
     }
 
     public class Receipt{
@@ -25,9 +26,6 @@ public class CreditCardPayment implements PaymentMethod {
             this.amount = amount;
             this.date = LocalDate.now().toString();
             this.cardHolder = cardHolder; 
-
-            Receipt receipt = new Receipt(amount, cardHolder);
-            receipt.display();
         }
 
         public void display(){
