@@ -12,7 +12,6 @@ public class CreditCardPayment implements PaymentMethod {
 
     @Override
     public void pay(double amount){
-        System.out.println("Paiement de " + amount + "DH par carte de credit !");
         Receipt receipt = new Receipt(amount, cardHolder);
         receipt.display();
     }
@@ -28,12 +27,12 @@ public class CreditCardPayment implements PaymentMethod {
             this.cardHolder = cardHolder; 
         }
 
+        public String getCardHolder(){return cardHolder;}
+        public double getAmount(){return amount;}
+        public String getDate(){return date;}
+
         public void display(){
-            System.out.println("======= Recu =======");
-            System.out.println("Titulaire : " + cardHolder);
-            System.out.println("Montant : " + amount + "DH");
-            System.out.println("Date : " + date);
-            System.out.println("====================");
+            System.out.println("Reçu — " + cardHolder + " — " + amount + " DH");
         }
     }
 }
